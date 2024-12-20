@@ -52,7 +52,7 @@ Para clonar o repositório, use o seguinte comando:
   Execute o seguinte comando:
   
   ```bash 
-  python MediaAluno.py
+  python3 MediaAluno.py
   ```
 
 ---
