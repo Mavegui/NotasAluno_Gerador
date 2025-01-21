@@ -28,26 +28,18 @@ class Aluno:
             del self.disciplinas[disciplina]
             return True
         return False
-    
+
     # Exibir dados cadastrados no dictionary
     def exibir_dados(self):
-        
-        # Nada cadastrado
         print(f"\nAluno: {self.nome}")
         if not self.disciplinas:
             print("Nenhuma disciplina cadastrada.")
-            return
-        
-        # Com dados cadastrados
-        print("\nDisciplinas e Notas:")
-        for disciplina, dados in self.disciplinas.items():
-            print(f"\nDisciplina: {disciplina}")
-            print(f"  - Portfólio: {dados['portfolio']:.0f}")
-            print(f"  - Prova Presencial: {dados['prova_Presencial']:.0f}")
-            print(f"  - Avaliação Virtual: {dados['av_Virtual']:.0f}")
-            print(f"  - Engajamento AVA: {dados['engajamento_AVA']:.0f}")
-            print(f"  - Nota Final: {dados['nota_Final']:.2f}")
-    
+        else:
+            for disciplina, notas in self.disciplinas.items():
+                print(f"\nDisciplina: {disciplina}")
+                for key, value in notas.items():
+                    print(f"{key}: {value}")
+
     # Salva os dados em .txt
     def salvar_em_txt(self):
         nome_arquivo = f"{self.nome.replace(' ', '_')}.txt"
