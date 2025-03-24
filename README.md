@@ -11,6 +11,7 @@ Este projeto foi desenvolvido como uma atividade prática da faculdade, adaptada
 ## **Funcionalidades**
 
 - Adicionar disciplinas e respectivas notas:
+  - Verifica se a disciplina tem portfólio. Se tiver, a nota do portfólio será requisitada; caso contrário, a nota da avaliação virtual será de (0 a 5000)
   - Portfólio (0 a 2000)
   - Prova presencial (0 a 5000)
   - Avaliação virtual (0 a 3000)
@@ -43,6 +44,23 @@ Para clonar o repositório, use o seguinte comando:
   ```bash
   git clone https://github.com/Mavegui/NotasAluno_Gerador.git
   ```
+---
+
+## **Como Executar com Docker**  
+
+Para rodar sem precisar construir a imagem localmente, basta usar:  
+  
+  ```bash
+  docker run --rm -it mavegui/notasaluno_gerador
+  ```
+
+Se preferir construir a imagem manualmente:
+  
+  ```bash
+  docker build -t notasaluno_gerador .
+  docker run --rm -it notasaluno_gerador
+  ```
+
 ---
 
 ## **Executar o Script**
@@ -84,6 +102,7 @@ Ao adicionar uma disciplina, você verá o seguinte:
 
   Informe os dados da disciplina:
   Digite o nome da disciplina: Matemática
+  Sua disciplina tem portfólio? (S/N)
   Digite a nota do portfólio (0 a 2000): 1500
   Digite a nota da prova presencial (0 a 5000): 4500
   Digite a nota da avaliação virtual final (0 a 3000): 2800
