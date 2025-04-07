@@ -1,20 +1,11 @@
-# Ignorar diretórios do Python
+.venv/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Ignorar logs e ficheiros temporários
 *.log
 *.tmp
 *.swp
-
-# Ignorar configurações locais do VS Code
 .vscode/
-
-# Ignorar ficheiros do Docker que não são necessários
 .dockerignore
-
-# Ignorar credenciais do Docker (se existirem)
 ~/.docker/
-
