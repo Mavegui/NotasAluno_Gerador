@@ -39,7 +39,7 @@ Antes de executar o projeto, certifique-se de ter instalado:
 
 ### **Clonar o Repositório**
 
-Para clonar o repositório, use o seguinte comando:
+Clonar o repositório, use o seguinte comando:
 
   ```bash
   git clone https://github.com/Mavegui/NotasAluno_Gerador.git
@@ -48,17 +48,10 @@ Para clonar o repositório, use o seguinte comando:
 
 ## **Como Executar com Docker**  
 
-Para rodar sem precisar construir a imagem localmente, basta usar:  
+Baixar imagem no Docker Hub:  
   
   ```bash
   docker run --rm -it mavegui/notasaluno_gerador
-  ```
-
-Se preferir construir a imagem manualmente:
-  
-  ```bash
-  docker build -t notasaluno_gerador .
-  docker run --rm -it notasaluno_gerador
   ```
 
 ---
@@ -134,15 +127,14 @@ Disciplina: Matemática
 ## **Estrutura do Projeto**
   ```bash
   media_aluno/
-  ├── MediaAluno.py      # Script principal
-  ├── README.md          # Documentação do projeto
+  ├── .gitignore
+  ├── Dockerfile
+  ├── MediaAluno.py
+  ├── README.md
+  ├── requirements.txt
   ```
 ---
 
 ## **Contribuição**
 
 Este projeto foi criado com fins educacionais e práticos, mas contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
-## **Licença**
-
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
